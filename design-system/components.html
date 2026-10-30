@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Closet: components</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<script src="icons.js" defer></script>
+<script src="avatar.js" defer></script>
+<style>
+  /* Specimen page layout only. Not part of the prototype. */
+  body { background: var(--bg-secondary); padding: var(--sema-space-800); }
+  .spec { max-width: calc(var(--frame-width) * 3); margin: 0 auto; }
+  .spec h1 { margin: 0 0 var(--sema-space-100); }
+  .spec > p { margin: 0 0 var(--sema-space-800); }
+  .group { background: var(--bg); border-radius: var(--sema-rounding-600); padding: var(--sema-space-600); margin-bottom: var(--sema-space-600); }
+  .group h2 { margin: 0 0 var(--sema-space-100); }
+  .group > p { margin: 0 0 var(--sema-space-400); }
+  .states { display: flex; flex-wrap: wrap; gap: var(--sema-space-600); align-items: flex-start; }
+  .state { display: flex; flex-direction: column; align-items: flex-start; gap: var(--sema-space-200); }
+  .state.w, .state.w-third { align-items: stretch; }
+  .state > .pin, .state > .look, .state > .board, .state > .product { align-self: stretch; }
+  .state > .badge:not(.badge--red) { box-shadow: var(--sema-elevation-floating); }
+  .state__label { font-size: var(--sema-font-size-ui-xs); color: var(--text-subtle); }
+  .w { width: var(--frame-width); }
+  .w-third { width: calc(var(--frame-width) / 3); }
+  .swatch { width: calc(var(--tap-min) * 2); height: var(--tap-min); border-radius: var(--sema-rounding-300); border: 1px solid var(--sema-color-border-decorative); }
+  .mini-phone { position: relative; width: var(--frame-width); height: calc(var(--frame-height) / 2); background: var(--bg); border: 1px solid var(--sema-color-border-decorative); border-radius: var(--sema-rounding-600); overflow: hidden; }
+  .new { color: var(--sema-color-background-primary); font-weight: var(--base-font-weight-700); }
+</style>
+</head>
+<body>
+<div class="spec">
+  <h1 class="t-heading-md">My Closet components</h1>
+  <p class="t-body-md t-subtle">Every component the four flows need, in each state. Values come from Gestalt (Pinterest's design system) and Apple's HIG. Components marked <span class="new">NEW</span> don't exist in Pinterest today. Grey tiles stand in for photos.</p>
+
+  <!-- Foundations -->
+  <section class="group">
+    <h2 class="t-heading-sm">Colour</h2>
+    <p class="t-body-sm t-subtle">Gestalt semantic colours used by My Closet.</p>
+    <div class="states">
+      <div class="state"><div class="swatch" style="background:var(--sema-color-background-primary)"></div><span class="state__label">background-primary #e60023</span></div>
+      <div class="state"><div class="swatch" style="background:var(--sema-color-background-selected)"></div><span class="state__label">background-selected #000000</span></div>
+      <div class="state"><div class="swatch" style="background:var(--sema-color-background-secondary)"></div><span class="state__label">background-secondary #e8e7e1</span></div>
+      <div class="state"><div class="swatch" style="background:var(--bg-tile)"></div><span class="state__label">grayscale-50 #f5f4ed (tiles)</span></div>
+      <div class="state"><div class="swatch" style="background:var(--sema-color-text-subtle)"></div><span class="state__label">text-subtle #636361</span></div>
+      <div class="state"><div class="swatch" style="background:var(--sema-color-text-success)"></div><span class="state__label">text-success #265926</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Text styles</h2>
+    <p class="t-body-sm t-subtle">Gestalt type scale. Pin Sans isn't public, so this renders in the iPhone system font.</p>
+    <div class="stack-200">
+      <div class="t-heading-md">Heading md 28 · Dark academia, fall</div>
+      <div class="t-heading-sm">Heading sm 20 · Pick outfit inspo from your boards</div>
+      <div class="t-heading-xs">Heading xs 16 · From my closet</div>
+      <div class="t-body-md">Body md 16 · Add a few pieces you wear a lot. We'll start matching them to the outfits you've saved.</div>
+      <div class="t-body-sm t-subtle">Body sm 14 · Pick a pin. We'll rebuild it from your closet.</div>
+      <div class="t-ui-xs">UI xs 12 · Pairs with 3 pieces you own (smallest text used, above HIG's 11 pt minimum)</div>
+    </div>
+  </section>
+
+  <!-- Controls -->
+  <section class="group">
+    <h2 class="t-heading-sm">Button</h2>
+    <p class="t-body-sm t-subtle">Gestalt Button, size lg (48px), the size Gestalt says to use on Pinner surfaces. One red Button per screen.</p>
+    <div class="states">
+      <div class="state"><button class="button button--red"><i class="icon" data-icon="sparkle"></i>Style me</button><span class="state__label">red · default</span></div>
+      <div class="state"><button class="button button--red is-pressed">Save look</button><span class="state__label">red · pressed</span></div>
+      <div class="state"><button class="button button--red" disabled><i class="icon" data-icon="sparkle"></i>Style me</button><span class="state__label">disabled (empty closet)</span></div>
+      <div class="state"><button class="button button--gray">Try another pin</button><span class="state__label">gray · default</span></div>
+      <div class="state"><button class="button button--gray is-pressed">Try another pin</button><span class="state__label">gray · pressed</span></div>
+      <div class="state"><button class="button button--dark button--floating"><i class="icon" data-icon="plus"></i>Upload</button><span class="state__label">dark · floating</span></div>
+      <div class="state"><button class="button button--dark"><i class="icon" data-icon="check"></i>Saved</button><span class="state__label">dark · done</span></div>
+      <div class="state"><button class="button button--gray button--md">Shop</button><span class="state__label">gray · md (on product cards)</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">IconButton</h2>
+    <p class="t-body-sm t-subtle">44 × 44 hit area (HIG minimum).</p>
+    <div class="states">
+      <div class="state"><button class="icon-button" aria-label="Back"><i class="icon" data-icon="back"></i></button><span class="state__label">back</span></div>
+      <div class="state"><button class="icon-button" aria-label="Close"><i class="icon" data-icon="close"></i></button><span class="state__label">close</span></div>
+      <div class="state"><button class="icon-button" aria-label="More"><i class="icon" data-icon="more"></i></button><span class="state__label">more</span></div>
+      <div class="state"><button class="icon-button" aria-label="Share"><i class="icon" data-icon="share"></i></button><span class="state__label">share</span></div>
+      <div class="state"><button class="icon-button is-pressed" aria-label="Back"><i class="icon" data-icon="back"></i></button><span class="state__label">pressed</span></div>
+      <div class="state"><button class="icon-button icon-button--on-image" aria-label="Back"><i class="icon" data-icon="back"></i></button><span class="state__label">on image</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">ButtonToggle (filter chips)</h2>
+    <p class="t-body-sm t-subtle">Gestalt ButtonToggle at md (40px visible, 44px hit area).</p>
+    <div class="states">
+      <div class="state w"><div class="chip-row" style="padding:0"><button class="chip is-selected">All</button><button class="chip">Tops</button><button class="chip">Bottoms</button><button class="chip">Outerwear</button><button class="chip">Shoes</button><button class="chip">Accessories</button></div><span class="state__label">Closet filters · selected, default</span></div>
+      <div class="state"><div class="row"><button class="chip is-selected">Recent</button><button class="chip is-pressed">Ready to wear</button><button class="chip">Needs pieces</button></div><span class="state__label">Looks filters · selected, pressed, default</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Tag</h2>
+    <p class="t-body-sm t-subtle">Gestalt Tag, dismissible. Auto-detected values the person can remove.</p>
+    <div class="states">
+      <div class="state"><div class="tag-list">
+        <span class="tag"><span class="tag__key">Type</span><span class="tag__value">Blazer</span><button class="tag__remove" aria-label="Remove Blazer"><i class="icon icon--sm" data-icon="close"></i></button></span>
+        <span class="tag"><span class="tag__key">Color</span><span class="tag__value">Brown tweed</span><button class="tag__remove" aria-label="Remove Brown tweed"><i class="icon icon--sm" data-icon="close"></i></button></span>
+        <span class="tag"><span class="tag__key">Style</span><span class="tag__value">Dark academia</span><button class="tag__remove" aria-label="Remove Dark academia"><i class="icon icon--sm" data-icon="close"></i></button></span>
+        <button class="tag tag--add"><i class="icon icon--sm" data-icon="plus"></i>Add tag</button>
+      </div><span class="state__label">detected · add</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Tabs</h2>
+    <div class="states">
+      <div class="state w"><nav class="tabs"><a class="tab is-selected" href="#">Closet</a><a class="tab" href="#">Looks</a><a class="tab" href="#">For You</a></nav><span class="state__label">Closet selected</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">TextField</h2>
+    <div class="states">
+      <div class="state w"><label class="field"><span class="field__label">Look name</span><input class="field__input" value="Dark academia, fall"></label><span class="state__label">filled</span></div>
+      <div class="state w"><label class="field"><span class="field__label">Name</span><input class="field__input" value="Tweed blazer" style="outline: var(--sema-space-50) solid var(--sema-color-border-focus-outer-default); outline-offset: var(--sema-space-25);"></label><span class="state__label">focused</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Badge</h2>
+    <div class="states">
+      <div class="state"><span class="badge badge--red">New</span><span class="state__label">red · new item</span></div>
+      <div class="state"><span class="badge">You</span><span class="state__label">default · on tile</span></div>
+      <div class="state"><span class="badge"><i class="icon icon--sm" data-icon="sparkle"></i>3 of 5 from your closet</span><span class="state__label">count</span></div>
+      <div class="state"><span class="check-badge"><i class="icon" data-icon="check"></i></span><span class="state__label">check · you own it</span></div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="group">
+    <h2 class="t-heading-sm">Closet item</h2>
+    <p class="t-body-sm t-subtle">Square tile and name. The longest real name has to fit on two lines.</p>
+    <div class="states">
+      <div class="state w-third"><div class="item"><div class="ph ph--square">Cream knit sweater</div><span class="item__name">Cream knit sweater</span></div><span class="state__label">default</span></div>
+      <div class="state w-third"><div class="item"><div class="ph ph--square">Tweed blazer</div><span class="badge badge--red">New</span><span class="item__name">Tweed blazer</span></div><span class="state__label">just added</span></div>
+      <div class="state w-third"><div class="item"><div class="ph ph--square">Brown trousers</div><span class="check-badge"><i class="icon" data-icon="check"></i></span><span class="item__name">Brown trousers</span></div><span class="state__label">used in a look</span></div>
+      <div class="state w-third"><div class="item"><div class="ph ph--square">White button-down</div><span class="item__name">White oversized button-down shirt</span></div><span class="state__label">long name</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Pin (shoppable)</h2>
+    <p class="t-body-sm t-subtle">Pinterest's existing pin with one new label: how many of your pieces it pairs with.</p>
+    <div class="states">
+      <div class="state" style="width: calc(var(--frame-width) / 2)"><a class="pin" href="#"><div class="pin__media"><div class="ph ph--tall" data-kind="Product">Cashmere crewneck</div><span class="badge">Pairs with 3 pieces you own</span></div><div class="pin__title">Cashmere crewneck</div><div class="pin__meta">Odile · $210</div></a><span class="state__label">product pin</span></div>
+      <div class="state" style="width: calc(var(--frame-width) / 2)"><a class="pin" href="#"><div class="pin__media"><div class="ph ph--tall" data-kind="Outfit pin">Tweed, knit & loafers</div></div><div class="pin__title">Tweed, knit & loafers</div></a><span class="state__label">outfit pin</span></div>
+      <div class="state w-third"><div class="product"><div class="ph ph--square" data-kind="Product">Tweed blazer</div><span class="product__brand">Hollis & Wren</span><span class="product__name">Tweed blazer</span><span class="product__price">$148</span><a class="button button--gray button--md" href="#">Shop</a></div><span class="state__label">product card (row)</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Board</h2>
+    <div class="states">
+      <div class="state" style="width: calc(var(--frame-width) / 2)"><a class="board" href="#"><div class="board__cover"><div class="ph">Dark Academia</div><div class="ph"></div><div class="ph"></div></div><span class="board__name">Dark Academia</span><span class="board__count">24 Pins</span></a><span class="state__label">board</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">List row</h2>
+    <div class="states">
+      <div class="state w"><button class="list-row"><span class="list-row__lead"><i class="icon" data-icon="camera"></i></span><span class="list-row__text"><span class="list-row__title">Take photo</span><br><span class="list-row__sub">Snap a piece on any background</span></span></button><span class="state__label">action row · default</span></div>
+      <div class="state w"><button class="list-row is-pressed"><span class="list-row__lead"><i class="icon" data-icon="photos"></i></span><span class="list-row__text"><span class="list-row__title">Choose from camera roll</span><br><span class="list-row__sub">Pick photos you've already taken</span></span></button><span class="state__label">action row · pressed</span></div>
+      <div class="state w"><div class="list-row is-selected"><span class="list-row__lead"><span class="ph"></span></span><span class="list-row__text"><span class="list-row__title">My Looks</span><br><span class="list-row__sub">Saved inside My Closet</span></span><span class="radio is-selected"><i class="icon" data-icon="check"></i></span></div><span class="state__label">board row · selected</span></div>
+      <div class="state w"><div class="list-row"><span class="list-row__lead"><span class="ph"></span></span><span class="list-row__text"><span class="list-row__title">Fall Fits</span><br><span class="list-row__sub">31 Pins</span></span><span class="radio"><i class="icon" data-icon="check"></i></span></div><span class="state__label">board row · not selected</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Toast and SlimBanner</h2>
+    <div class="states">
+      <div class="state w"><div class="toast"><span class="check-badge"><i class="icon" data-icon="check"></i></span><span class="toast__text">Saved to My Looks</span><a class="button button--white" href="#">View</a></div><span class="state__label">Toast · with action</span></div>
+      <div class="state w"><div class="slim-banner"><i class="icon icon--sm" data-icon="sparkle"></i><span>This piece is in 1 saved look you were shopping for. Adding it updates them.</span></div><span class="state__label">SlimBanner · info</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Sheet and tab bar</h2>
+    <p class="t-body-sm t-subtle">HIG sheet with grabber over a scrim. Pinterest's existing bottom navigation, unchanged.</p>
+    <div class="states">
+      <div class="state"><div class="mini-phone"><div class="scrim"></div><div class="sheet" style="padding-bottom:0"><div class="sheet__grabber"></div><div class="sheet__header"><button class="icon-button" aria-label="Close"><i class="icon" data-icon="close"></i></button><span class="sheet__title t-heading-xs">Add to your closet</span><span></span></div><div class="sheet__body"><button class="list-row"><span class="list-row__lead"><i class="icon" data-icon="receipt"></i></span><span class="list-row__text"><span class="list-row__title">Import past purchases</span><br><span class="list-row__sub">Find pieces you've bought through Pinterest</span></span></button></div></div></div><span class="state__label">Sheet</span></div>
+      <div class="state w"><nav class="tab-bar" style="padding-bottom:0; height: var(--tab-bar-height)"><a class="tab-bar__item" aria-label="Home"><i class="icon" data-icon="home"></i></a><a class="tab-bar__item" aria-label="Search"><i class="icon" data-icon="search"></i></a><a class="tab-bar__item" aria-label="Create"><i class="icon" data-icon="plus"></i></a><a class="tab-bar__item" aria-label="Messages"><i class="icon" data-icon="message"></i></a><a class="tab-bar__item" aria-label="Profile"><span class="tab-bar__avatar">A</span></a></nav><span class="state__label">Tab bar · profile selected</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm">Empty state</h2>
+    <div class="states">
+      <div class="state w"><div class="empty"><div class="empty__icon"><i class="icon" data-icon="hanger"></i></div><div class="t-heading-sm">Your closet is empty</div><div class="t-body-sm t-subtle">Add a few pieces you wear a lot. We'll start matching them to the outfits you've saved.</div></div><span class="state__label">empty closet</span></div>
+      <div class="state w"><div class="empty"><div class="t-heading-sm">Save a look to see it here</div><div class="t-body-sm t-subtle">Pick an outfit pin and we'll rebuild it from your closet. Looks you save land here, ready to wear.</div></div><span class="state__label">empty Looks tab</span></div>
+    </div>
+  </section>
+
+  <!-- New -->
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Avatar stage</h2>
+    <p class="t-body-sm t-subtle">You, wearing the look. The inspiration pin sits in the corner for comparison.</p>
+    <div class="states">
+      <div class="state w"><div class="avatar-stage" style="margin:0 0 var(--sema-space-800)"><div class="ph ph--avatar" data-kind="Avatar">Ava, cream sweater + brown trousers</div><span class="badge avatar-stage__tag">You</span><div class="avatar-stage__cta"><a class="button button--red" href="#"><i class="icon" data-icon="sparkle"></i>Style me</a></div></div><span class="state__label">Closet tab</span></div>
+      <div class="state w"><div class="avatar-stage" style="margin:0"><div class="ph ph--avatar" data-kind="Avatar">Ava in the recreated look</div><div class="avatar-stage__inspo"><div class="ph">Inspo pin</div><span class="t-ui-xs">Your inspo</span></div><span class="badge avatar-stage__count"><i class="icon icon--sm" data-icon="sparkle"></i>3 of 5 from your closet</span></div><span class="state__label">Complete the Look</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Progress checklist</h2>
+    <div class="states">
+      <div class="state w"><div class="progress"><div class="t-heading-sm">Matching with your closet…</div><div class="progress__bar"><i></i></div><div class="progress__step is-done"><span class="check-badge"><i class="icon" data-icon="check"></i></span>Reading the outfit</div><div class="progress__step"><span class="check-badge"><i class="icon" data-icon="check"></i></span>Finding your pieces</div><div class="progress__step"><span class="check-badge"><i class="icon" data-icon="check"></i></span>Filling the gaps</div></div><span class="state__label">step 1 of 3</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Look card</h2>
+    <p class="t-body-sm t-subtle">Status uses an icon and words, not colour alone.</p>
+    <div class="states">
+      <div class="state" style="width: calc(var(--frame-width) / 2)"><a class="look" href="#"><div class="look__media"><div class="ph ph--tall" data-kind="Avatar">Dark academia, fall</div><div class="ph look__inspo"></div><span class="badge">Just saved</span></div><span class="look__name">Dark academia, fall</span><span class="look__status"><i class="icon" data-icon="bag"></i>2 pieces to shop</span></a><span class="state__label">needs pieces</span></div>
+      <div class="state" style="width: calc(var(--frame-width) / 2)"><a class="look" href="#"><div class="look__media"><div class="ph ph--tall" data-kind="Avatar">Coffee & errands</div><div class="ph look__inspo"></div></div><span class="look__name">Coffee & errands</span><span class="look__status is-ready"><i class="icon" data-icon="check"></i>All pieces owned</span></a><span class="state__label">ready to wear</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Style branch</h2>
+    <div class="states">
+      <div class="state w"><a class="branch" href="#"><div class="branch__head"><span class="t-heading-sm">Preppy</span><i class="icon" data-icon="chevron"></i></div><p class="branch__desc t-body-sm t-subtle">Crisp collars, sweater vests and loafers. Dark academia with the lights turned up.</p><div class="branch__label">Key pieces to add</div><div class="branch__pieces"><div class="ph ph--square">Oxford shirt</div><div class="ph ph--square">Argyle sweater vest</div><div class="ph ph--square">Pleated midi skirt</div></div><span class="branch__fit"><i class="icon icon--sm" data-icon="check"></i>6 pieces you own already fit</span></a><span class="state__label">branch card</span></div>
+      <div class="state w"><a class="feature-card" href="#"><div class="ph">Ava</div><div class="feature-card__text"><div class="row" style="align-items:center"><span class="t-heading-sm">My Closet</span><span class="badge badge--red">New</span></div><div class="t-ui-sm t-bold">12 pieces · 3 looks</div><div class="t-body-sm t-subtle">Recreate your saved outfits with clothes you already own</div></div><i class="icon" data-icon="chevron"></i></a><span class="state__label">entry card on profile</span></div>
+    </div>
+  </section>
+
+  <!-- Round 2 -->
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Avatar</h2>
+    <p class="t-body-sm t-subtle">Illustrated and faceless. The garments keep the details that identify them. Skin tones are Gestalt's 16.</p>
+    <div class="states">
+      <div class="state"><div class="avatar-frame" style="width: var(--avatar-mini-width); height: var(--avatar-mini-height)"><div class="avatar" data-skin="9" data-hair="long" data-body="straight" data-outfit="top:sweater:cream; bottom:trousers:brown; shoes:loafers:black"></div></div><span class="state__label">sweater, trousers, loafers</span></div>
+      <div class="state"><div class="avatar-frame" style="width: var(--avatar-mini-width); height: var(--avatar-mini-height)"><div class="avatar" data-skin="3" data-hair="bob" data-hair-color="honey" data-body="curvy" data-outfit="top:buttondown:white; bottom:skirt:plaid:plaid; shoes:loafers:black; outer:blazer:tweed:tweed"></div></div><span class="state__label">button-down, plaid, tweed</span></div>
+      <div class="state"><div class="avatar-frame" style="width: var(--avatar-mini-width); height: var(--avatar-mini-height)"><div class="avatar" data-skin="14" data-hair="curly" data-hair-color="black" data-body="full" data-outfit="top:turtleneck:black; bottom:jeans:denim; shoes:boots:black; outer:coat:camel"></div></div><span class="state__label">turtleneck, jeans, coat</span></div>
+      <div class="state"><div class="avatar-frame" style="width: var(--avatar-mini-width); height: var(--avatar-mini-height)"><div class="avatar" data-skin="5" data-hair="bun" data-hair-color="chestnut" data-body="broad" data-outfit="top:tee:grey; bottom:trousers:grey; shoes:loafers:grey"></div></div><span class="state__label">not dressed yet</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Avatar setup controls · SegmentedControl</h2>
+    <div class="states">
+      <div class="state w"><div class="swatches"><button class="swatch-btn" aria-label="Skin tone 1"><i style="background:var(--skin-tone-1)"></i></button><button class="swatch-btn" aria-label="Skin tone 4"><i style="background:var(--skin-tone-4)"></i></button><button class="swatch-btn" aria-label="Skin tone 7"><i style="background:var(--skin-tone-7)"></i></button><button class="swatch-btn is-selected" aria-label="Skin tone 9"><i style="background:var(--skin-tone-9)"></i></button><button class="swatch-btn" aria-label="Skin tone 11"><i style="background:var(--skin-tone-11)"></i></button><button class="swatch-btn" aria-label="Skin tone 13"><i style="background:var(--skin-tone-13)"></i></button><button class="swatch-btn" aria-label="Skin tone 14"><i style="background:var(--skin-tone-14)"></i></button><button class="swatch-btn" aria-label="Skin tone 16"><i style="background:var(--skin-tone-16)"></i></button></div><span class="state__label">skin tone swatch · selected, default (44px tap)</span></div>
+      <div class="state w"><div class="segmented"><button class="segmented__item">Inspo pin</button><button class="segmented__item is-selected">On you</button></div><span class="state__label">Gestalt SegmentedControl</span></div>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="t-heading-sm"><span class="new">NEW</span> Style map node · closet masonry</h2>
+    <div class="states">
+      <div class="state"><div style="position:relative; width: var(--map-center-size); height: var(--map-center-size)"><div class="map-node" style="left:50%; top:50%"><span class="map-node__name">Preppy</span><span class="map-node__fit">6 fit</span></div></div><span class="state__label">node · default</span></div>
+      <div class="state"><div style="position:relative; width: var(--map-center-size); height: var(--map-center-size)"><div class="map-node is-selected" style="left:50%; top:50%"><span class="map-node__name">Quiet luxury</span><span class="map-node__fit">6 fit</span></div></div><span class="state__label">node · selected</span></div>
+      <div class="state w"><div class="closet-masonry" style="padding:0"><div class="item"><div class="ph ph--cutout shape-top">Cream knit sweater</div></div><div class="item"><div class="ph ph--cutout shape-long">Brown trousers</div></div><div class="item"><div class="ph ph--cutout shape-short">Black loafers</div></div><div class="item"><div class="ph ph--cutout shape-mid">Plaid skirt</div></div><div class="item"><div class="ph ph--cutout shape-long">Camel coat</div></div><div class="item"><div class="ph ph--cutout shape-top">White button-down</div></div></div><span class="state__label">each piece keeps its own shape</span></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

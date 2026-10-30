@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete the look · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="complete-look">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <header class="nav-bar"><a class="icon-button" href="09-board-pins.html" aria-label="Back"><i class="icon " data-icon="back"></i></a><div class="nav-bar__title"><span class="t-heading-xs">Complete the look</span></div><button class="icon-button" aria-label="Share"><i class="icon " data-icon="share"></i></button></header>
+  <main class="screen-body js-look"></main>
+  <div class="screen-footer"><div class="row"><a class="button button--gray" href="09-board-pins.html">Try another pin</a><a class="button button--red js-save" href="12-save-sheet.html">Save look</a></div></div>
+  <a class="scrim js-scrim js-close" href="#" aria-label="Close" hidden></a>
+  <div class="sheet js-sheet" hidden style="top: calc(var(--status-bar-height) + var(--sema-space-1200))">
+    <div class="sheet__grabber"></div>
+    <div class="sheet__header"><a class="icon-button js-close" href="#" aria-label="Close"><i class="icon " data-icon="close"></i></a><span class="sheet__title t-heading-xs">Save this look</span><span></span></div>
+    <div class="sheet__body">
+      <div style="padding: 0 var(--sema-space-400) var(--sema-space-300)"><label class="field"><span class="field__label">Look name</span><input class="field__input js-lookname" value=""></label></div>
+      <div style="padding: 0 var(--sema-space-200)"><div class="list-row is-selected"><span class="list-row__lead"><i class="icon " data-icon="hanger"></i></span><span class="list-row__text"><span class="list-row__title">My Looks</span><br><span class="list-row__sub">Saved inside My Closet</span></span><span class="radio is-selected"><i class="icon " data-icon="check"></i></span></div></div>
+      <div class="t-ui-sm t-subtle" style="padding: var(--sema-space-300) var(--sema-space-400) 0">Also save to a board</div>
+      <div class="list-row" data-board="y2k-grunge" role="button"><span class="list-row__lead"><div class="ph "><img class="photo" src="../images/board-y2k-grunge-1.jpg" alt="" onerror="this.remove()"></div></span><span class="list-row__text"><span class="list-row__title">Y2K Grunge</span><br><span class="list-row__sub">24 Pins</span></span><span class="radio"><i class="icon " data-icon="check"></i></span></div><div class="list-row" data-board="2000s-streetwear" role="button"><span class="list-row__lead"><div class="ph "><img class="photo" src="../images/board-2000s-streetwear-1.jpg" alt="" onerror="this.remove()"></div></span><span class="list-row__text"><span class="list-row__title">2000s Streetwear</span><br><span class="list-row__sub">18 Pins</span></span><span class="radio"><i class="icon " data-icon="check"></i></span></div><div class="list-row" data-board="fall-fits" role="button"><span class="list-row__lead"><div class="ph "><img class="photo" src="../images/board-fall-fits-1.jpg" alt="" onerror="this.remove()"></div></span><span class="list-row__text"><span class="list-row__title">Fall Fits</span><br><span class="list-row__sub">31 Pins</span></span><span class="radio"><i class="icon " data-icon="check"></i></span></div><div class="list-row" data-board="rainy-day-layers" role="button"><span class="list-row__lead"><div class="ph "><img class="photo" src="../images/board-rainy-day-layers-1.jpg" alt="" onerror="this.remove()"></div></span><span class="list-row__text"><span class="list-row__title">Rainy Day Layers</span><br><span class="list-row__sub">12 Pins</span></span><span class="radio"><i class="icon " data-icon="check"></i></span></div>
+      <div class="list-row"><span class="list-row__lead"><i class="icon " data-icon="plus"></i></span><span class="list-row__text"><span class="list-row__title">Create board</span></span></div>
+    </div>
+    <div class="sheet__footer"><a class="button button--red button--full js-confirm" href="13-complete-look-saved.html">Save</a></div>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+</div>
+</body>
+</html>

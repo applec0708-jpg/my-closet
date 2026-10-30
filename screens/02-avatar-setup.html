@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make your avatar · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="avatar">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <header class="nav-bar"><a class="icon-button js-avatar-close" href="04-closet.html" aria-label="Close"><i class="icon " data-icon="close"></i></a><div class="nav-bar__title"><span class="t-heading-xs">Your avatar</span></div><a class="text-link" href="03-closet-empty.html" style="justify-self:end">Skip</a></header>
+  <main class="screen-body" style="padding: 0 var(--sema-space-400) var(--sema-space-400)">
+    <div class="avatar-frame" style="height: calc(var(--avatar-mini-height) * 1.5)">
+      <div class="avatar" id="preview" data-me data-skin="9" data-hair="long" data-hair-color="espresso" data-body="straight" data-outfit="top:tee:#c9a23a; bottom:jeans:#a9bdd2; shoes:boots:black" aria-label="Preview of your avatar"></div>
+    </div>
+    <p class="t-body-sm t-subtle center" style="margin: var(--sema-space-200) 0 0">We dress this in your clothes so you can see a look before you wear it.</p>
+    <div class="setup-label">Skin tone</div>
+    <div class="swatches"><button class="swatch-btn" data-set="skin" data-value="1" aria-label="Skin tone 1"><i style="background: var(--skin-tone-1)"></i></button><button class="swatch-btn" data-set="skin" data-value="2" aria-label="Skin tone 2"><i style="background: var(--skin-tone-2)"></i></button><button class="swatch-btn" data-set="skin" data-value="3" aria-label="Skin tone 3"><i style="background: var(--skin-tone-3)"></i></button><button class="swatch-btn" data-set="skin" data-value="4" aria-label="Skin tone 4"><i style="background: var(--skin-tone-4)"></i></button><button class="swatch-btn" data-set="skin" data-value="5" aria-label="Skin tone 5"><i style="background: var(--skin-tone-5)"></i></button><button class="swatch-btn" data-set="skin" data-value="6" aria-label="Skin tone 6"><i style="background: var(--skin-tone-6)"></i></button><button class="swatch-btn" data-set="skin" data-value="7" aria-label="Skin tone 7"><i style="background: var(--skin-tone-7)"></i></button><button class="swatch-btn" data-set="skin" data-value="8" aria-label="Skin tone 8"><i style="background: var(--skin-tone-8)"></i></button><button class="swatch-btn is-selected" data-set="skin" data-value="9" aria-label="Skin tone 9"><i style="background: var(--skin-tone-9)"></i></button><button class="swatch-btn" data-set="skin" data-value="10" aria-label="Skin tone 10"><i style="background: var(--skin-tone-10)"></i></button><button class="swatch-btn" data-set="skin" data-value="11" aria-label="Skin tone 11"><i style="background: var(--skin-tone-11)"></i></button><button class="swatch-btn" data-set="skin" data-value="12" aria-label="Skin tone 12"><i style="background: var(--skin-tone-12)"></i></button><button class="swatch-btn" data-set="skin" data-value="13" aria-label="Skin tone 13"><i style="background: var(--skin-tone-13)"></i></button><button class="swatch-btn" data-set="skin" data-value="14" aria-label="Skin tone 14"><i style="background: var(--skin-tone-14)"></i></button><button class="swatch-btn" data-set="skin" data-value="15" aria-label="Skin tone 15"><i style="background: var(--skin-tone-15)"></i></button><button class="swatch-btn" data-set="skin" data-value="16" aria-label="Skin tone 16"><i style="background: var(--skin-tone-16)"></i></button></div>
+    <div class="setup-label">Hair</div>
+    <div class="row" style="flex-wrap: wrap"><button class="chip is-selected" data-set="hair" data-value="long">Long</button><button class="chip" data-set="hair" data-value="bob">Bob</button><button class="chip" data-set="hair" data-value="curly">Curly</button><button class="chip" data-set="hair" data-value="bun">Bun</button></div>
+    <div class="row" style="flex-wrap: wrap; margin-top: var(--sema-space-200)"><button class="chip" data-set="hairColor" data-value="black">Black</button><button class="chip is-selected" data-set="hairColor" data-value="espresso">Dark brown</button><button class="chip" data-set="hairColor" data-value="chestnut">Brown</button><button class="chip" data-set="hairColor" data-value="honey">Blonde</button></div>
+    <div class="setup-label">Body shape</div>
+    <div class="shape-picker"><button class="shape-option is-selected" data-set="body" data-value="straight"><span class="avatar" data-skin="5" data-hair="bun" data-hair-color="chestnut" data-body="straight" data-outfit="top:tee:grey; bottom:trousers:grey; shoes:loafers:grey" aria-label="Straight"></span>Straight</button><button class="shape-option" data-set="body" data-value="curvy"><span class="avatar" data-skin="5" data-hair="bun" data-hair-color="chestnut" data-body="curvy" data-outfit="top:tee:grey; bottom:trousers:grey; shoes:loafers:grey" aria-label="Curvy"></span>Curvy</button><button class="shape-option" data-set="body" data-value="broad"><span class="avatar" data-skin="5" data-hair="bun" data-hair-color="chestnut" data-body="broad" data-outfit="top:tee:grey; bottom:trousers:grey; shoes:loafers:grey" aria-label="Broad shoulders"></span>Broad shoulders</button><button class="shape-option" data-set="body" data-value="full"><span class="avatar" data-skin="5" data-hair="bun" data-hair-color="chestnut" data-body="full" data-outfit="top:tee:grey; bottom:trousers:grey; shoes:loafers:grey" aria-label="Full"></span>Full</button></div>
+    <p class="t-body-xs t-subtle" style="margin: var(--sema-space-200) 0 0">Only used to show how clothes hang. Only you see it, and you can change it anytime.</p>
+  </main>
+  <div class="screen-footer"><a class="button button--red button--full js-done" href="03-closet-empty.html">Done</a></div>
+  <div class="home-indicator"></div>
+</div>
+</div>
+<script>
+/* Tapping an option updates the preview. Prototype only: nothing is saved. */
+document.querySelectorAll('[data-set]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var key = btn.dataset.set, preview = document.getElementById('preview');
+    document.querySelectorAll('[data-set="' + key + '"]').forEach(function (b) { b.classList.remove('is-selected'); });
+    btn.classList.add('is-selected');
+    preview.dataset[key] = btn.dataset.value;
+    window.drawAvatars(preview.parentNode);
+  });
+});
+</script>
+</body>
+</html>

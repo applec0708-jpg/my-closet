@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add to your closet · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="closet">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <header class="nav-bar"><a class="icon-button" href="01-profile.html" aria-label="Back"><i class="icon " data-icon="back"></i></a><div class="nav-bar__title"><span class="t-heading-xs">My Closet</span><span class="t-ui-xs t-subtle">11 items</span></div><button class="icon-button" aria-label="More"><i class="icon " data-icon="more"></i></button></header>
+  <nav class="tabs"><a class="tab is-selected" href="04-closet.html">Closet</a><a class="tab" href="14-looks.html">Looks</a><a class="tab" href="16-for-you.html">For You</a></nav>
+  <main class="screen-body">
+    <section class="closet-head">
+      <a class="avatar-frame" href="02-avatar-setup.html?from=closet" aria-label="Edit your avatar"><div class="avatar" data-me data-skin="9" data-hair="long" data-hair-color="espresso" data-body="straight" data-outfit="top:tee:#c9a23a; bottom:jeans:#a9bdd2; shoes:boots:black" aria-label="Ava in a mustard ringer tee, light bootcut jeans and black buckle boots"></div></a>
+      <div class="closet-head__side">
+        <a class="button button--red" href="08-pick-board.html"><i class="icon " data-icon="sparkle"></i>Style me</a>
+        <p class="t-body-sm t-subtle" style="margin:0">Pick a pin. We'll rebuild it from your closet.</p>
+        <a class="text-link" href="02-avatar-setup.html?from=closet">Edit avatar</a>
+      </div>
+    </section>
+    <div class="chip-row"><button class="chip is-selected">All</button><button class="chip">Tops</button><button class="chip">Bottoms</button><button class="chip">Outerwear</button><button class="chip">Shoes</button><button class="chip">Accessories</button></div>
+    <div class="closet-masonry">
+      <div class="item" data-slug="mustard-ringer-tee" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/mustard-ringer-tee.png" alt="" onerror="this.remove()">Mustard ringer tee</div></div>
+      <div class="item" data-slug="light-bootcut-jeans" data-cat="Bottoms"><div class="ph ph--cutout shape-long"><img class="photo" src="../images/light-bootcut-jeans.png" alt="" onerror="this.remove()">Light bootcut jeans</div></div>
+      <div class="item" data-slug="black-buckle-boots" data-cat="Shoes"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/black-buckle-boots.png" alt="" onerror="this.remove()">Black buckle boots</div></div>
+      <div class="item" data-slug="yellow-plaid-zip-hoodie" data-cat="Outerwear"><div class="ph ph--cutout shape-mid"><img class="photo" src="../images/yellow-plaid-zip-hoodie.png" alt="" onerror="this.remove()">Yellow plaid zip hoodie</div></div>
+      <div class="item" data-slug="brown-zip-jacket" data-cat="Outerwear"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/brown-zip-jacket.png" alt="" onerror="this.remove()">Brown zip jacket</div></div>
+      <div class="item" data-slug="red-baseball-tee" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/red-baseball-tee.png" alt="" onerror="this.remove()">Red baseball tee</div></div>
+      <div class="item" data-slug="mid-wash-bootcut-jeans" data-cat="Bottoms"><div class="ph ph--cutout shape-long"><img class="photo" src="../images/mid-wash-bootcut-jeans.png" alt="" onerror="this.remove()">Mid-wash bootcut jeans</div></div>
+      <div class="item" data-slug="butterfly-hooded-top" data-cat="Tops"><div class="ph ph--cutout shape-mid"><img class="photo" src="../images/butterfly-hooded-top.png" alt="" onerror="this.remove()">Butterfly hooded top</div></div>
+      <div class="item" data-slug="brown-cap-sleeve-jacket" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/brown-cap-sleeve-jacket.png" alt="" onerror="this.remove()">Brown cap-sleeve jacket</div></div>
+      <div class="item" data-slug="light-ripped-jeans" data-cat="Bottoms"><div class="ph ph--cutout shape-long"><img class="photo" src="../images/light-ripped-jeans.png" alt="" onerror="this.remove()">Light ripped jeans</div></div>
+      <div class="item" data-slug="yellow-graphic-tee" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/yellow-graphic-tee.png" alt="" onerror="this.remove()">Yellow graphic tee</div></div>
+    </div>
+  </main>
+  <nav class="tab-bar">
+    <a class="tab-bar__item" href="#" aria-label="Home"><i class="icon " data-icon="home"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Search"><i class="icon " data-icon="search"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Create"><i class="icon " data-icon="plus"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Messages"><i class="icon " data-icon="message"></i></a>
+    <a class="tab-bar__item" href="01-profile.html" aria-label="Profile"><span class="tab-bar__avatar">A</span></a>
+  </nav>
+  <a class="scrim" href="04-closet.html" aria-label="Close"></a>
+  <div class="sheet">
+    <div class="sheet__grabber"></div>
+    <div class="sheet__header"><a class="icon-button" href="04-closet.html" aria-label="Close"><i class="icon " data-icon="close"></i></a><span class="sheet__title t-heading-xs">Add to your closet</span><span></span></div>
+    <div class="sheet__body">
+      <a class="list-row" href="07-new-item.html"><span class="list-row__lead"><i class="icon " data-icon="camera"></i></span><span class="list-row__text"><span class="list-row__title">Take photo</span><br><span class="list-row__sub">Snap a piece on any background</span></span></a>
+      <a class="list-row" href="07-new-item.html"><span class="list-row__lead"><i class="icon " data-icon="photos"></i></span><span class="list-row__text"><span class="list-row__title">Choose from camera roll</span><br><span class="list-row__sub">Pick photos you've already taken</span></span></a>
+      <a class="list-row" href="07-new-item.html"><span class="list-row__lead"><i class="icon " data-icon="receipt"></i></span><span class="list-row__text"><span class="list-row__title">Import past purchases</span><br><span class="list-row__sub">Find pieces you've bought through Pinterest</span></span></a>
+      <p class="t-body-xs t-subtle" style="padding: var(--sema-space-200) var(--sema-space-400) var(--sema-space-400); margin:0">Lay items flat in good light for the cleanest cutout.</p>
+    </div>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+</div>
+</body>
+</html>

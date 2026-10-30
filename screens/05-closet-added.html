@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Closet, item added · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="closet">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <header class="nav-bar"><a class="icon-button" href="01-profile.html" aria-label="Back"><i class="icon " data-icon="back"></i></a><div class="nav-bar__title"><span class="t-heading-xs">My Closet</span><span class="t-ui-xs t-subtle">12 items</span></div><button class="icon-button" aria-label="More"><i class="icon " data-icon="more"></i></button></header>
+  <nav class="tabs"><a class="tab is-selected" href="04-closet.html">Closet</a><a class="tab" href="14-looks.html">Looks</a><a class="tab" href="16-for-you.html">For You</a></nav>
+  <main class="screen-body">
+    <section class="closet-head">
+      <a class="avatar-frame" href="02-avatar-setup.html?from=closet" aria-label="Edit your avatar"><div class="avatar" data-me data-skin="9" data-hair="long" data-hair-color="espresso" data-body="straight" data-outfit="top:tee:#c9a23a; bottom:jeans:#a9bdd2; shoes:boots:black" aria-label="Ava in a mustard ringer tee, light bootcut jeans and black buckle boots"></div></a>
+      <div class="closet-head__side">
+        <a class="button button--red" href="08-pick-board.html"><i class="icon " data-icon="sparkle"></i>Style me</a>
+        <p class="t-body-sm t-subtle" style="margin:0">Pick a pin. We'll rebuild it from your closet.</p>
+        <a class="text-link" href="02-avatar-setup.html?from=closet">Edit avatar</a>
+      </div>
+    </section>
+    <div class="chip-row"><button class="chip is-selected">All</button><button class="chip">Tops</button><button class="chip">Bottoms</button><button class="chip">Outerwear</button><button class="chip">Shoes</button><button class="chip">Accessories</button></div>
+    <div class="closet-masonry">
+      <div class="item" data-slug="gray-plaid-zip-jacket" data-cat="Outerwear"><div class="ph ph--cutout shape-short"><img class="photo" src="../images/gray-plaid-zip-jacket.png" alt="" onerror="this.remove()">Gray plaid zip jacket</div><span class="badge badge--red">New</span></div>
+      <div class="item" data-slug="mustard-ringer-tee" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/mustard-ringer-tee.png" alt="" onerror="this.remove()">Mustard ringer tee</div></div>
+      <div class="item" data-slug="light-bootcut-jeans" data-cat="Bottoms"><div class="ph ph--cutout shape-long"><img class="photo" src="../images/light-bootcut-jeans.png" alt="" onerror="this.remove()">Light bootcut jeans</div></div>
+      <div class="item" data-slug="black-buckle-boots" data-cat="Shoes"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/black-buckle-boots.png" alt="" onerror="this.remove()">Black buckle boots</div></div>
+      <div class="item" data-slug="yellow-plaid-zip-hoodie" data-cat="Outerwear"><div class="ph ph--cutout shape-mid"><img class="photo" src="../images/yellow-plaid-zip-hoodie.png" alt="" onerror="this.remove()">Yellow plaid zip hoodie</div></div>
+      <div class="item" data-slug="brown-zip-jacket" data-cat="Outerwear"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/brown-zip-jacket.png" alt="" onerror="this.remove()">Brown zip jacket</div></div>
+      <div class="item" data-slug="red-baseball-tee" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/red-baseball-tee.png" alt="" onerror="this.remove()">Red baseball tee</div></div>
+      <div class="item" data-slug="mid-wash-bootcut-jeans" data-cat="Bottoms"><div class="ph ph--cutout shape-long"><img class="photo" src="../images/mid-wash-bootcut-jeans.png" alt="" onerror="this.remove()">Mid-wash bootcut jeans</div></div>
+      <div class="item" data-slug="butterfly-hooded-top" data-cat="Tops"><div class="ph ph--cutout shape-mid"><img class="photo" src="../images/butterfly-hooded-top.png" alt="" onerror="this.remove()">Butterfly hooded top</div></div>
+      <div class="item" data-slug="brown-cap-sleeve-jacket" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/brown-cap-sleeve-jacket.png" alt="" onerror="this.remove()">Brown cap-sleeve jacket</div></div>
+      <div class="item" data-slug="light-ripped-jeans" data-cat="Bottoms"><div class="ph ph--cutout shape-long"><img class="photo" src="../images/light-ripped-jeans.png" alt="" onerror="this.remove()">Light ripped jeans</div></div>
+      <div class="item" data-slug="yellow-graphic-tee" data-cat="Tops"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/yellow-graphic-tee.png" alt="" onerror="this.remove()">Yellow graphic tee</div></div>
+    </div>
+  </main>
+  <div class="toast-dock" style="bottom: calc(var(--tab-bar-height) + var(--home-indicator-height) + var(--comp-button-height-lg) + var(--sema-space-600))">
+    <div class="toast"><span class="check-badge"><i class="icon " data-icon="check"></i></span><span class="toast__text">Gray plaid zip jacket added · 1 look updated</span><a class="button button--white" href="14-looks.html">View</a></div>
+  </div>
+  <div class="fab-dock"><a class="button button--dark button--floating" href="06-upload-sheet.html"><i class="icon " data-icon="plus"></i>Upload</a></div>
+  <nav class="tab-bar">
+    <a class="tab-bar__item" href="#" aria-label="Home"><i class="icon " data-icon="home"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Search"><i class="icon " data-icon="search"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Create"><i class="icon " data-icon="plus"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Messages"><i class="icon " data-icon="message"></i></a>
+    <a class="tab-bar__item" href="01-profile.html" aria-label="Profile"><span class="tab-bar__avatar">A</span></a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+</div>
+</body>
+</html>

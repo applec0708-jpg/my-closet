@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New item · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="new-item">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <div class="sheet sheet--full" style="position: relative; top: 0; flex: 1; box-shadow: none">
+    <div class="sheet__header"><a class="icon-button" href="06-upload-sheet.html" aria-label="Back"><i class="icon " data-icon="back"></i></a><span class="sheet__title t-heading-xs">New item</span><a class="icon-button" href="04-closet.html" aria-label="Close"><i class="icon " data-icon="close"></i></a></div>
+    <div class="sheet__body" style="padding: 0 var(--sema-space-400)">
+      <div class="ph ph--cutout shape-short"><img class="photo" src="../images/gray-plaid-zip-jacket.png" alt="" onerror="this.remove()">Gray plaid zip jacket</div>
+      <p class="t-body-xs t-subtle center" style="margin: var(--sema-space-200) 0 var(--sema-space-400)">Background removed</p>
+      <label class="field"><span class="field__label">Name</span><input class="field__input" value="Gray plaid zip jacket"></label>
+      <div class="setup-label" style="display:flex; justify-content:space-between">We detected <span class="t-body-xs t-subtle">Tap × to remove</span></div>
+      <div class="tag-list"><span class="tag"><span class="tag__key">Type</span><span class="tag__value">Jacket</span><button class="tag__remove" aria-label="Remove Jacket"><i class="icon icon--sm" data-icon="close"></i></button></span><span class="tag"><span class="tag__key">Color</span><span class="tag__value">Gray plaid</span><button class="tag__remove" aria-label="Remove Gray plaid"><i class="icon icon--sm" data-icon="close"></i></button></span><span class="tag"><span class="tag__key">Style</span><span class="tag__value">Y2K grunge</span><button class="tag__remove" aria-label="Remove Y2K grunge"><i class="icon icon--sm" data-icon="close"></i></button></span><button class="tag tag--add"><i class="icon icon--sm" data-icon="plus"></i>Add tag</button></div>
+      <div class="setup-label">Category</div>
+      <div class="chip-row" style="padding: var(--sema-space-100) 0"><button class="chip">Tops</button><button class="chip">Bottoms</button><button class="chip is-selected">Outerwear</button><button class="chip">Shoes</button><button class="chip">Accessories</button></div>
+      <div class="slim-banner" style="margin: var(--sema-space-400) 0"><i class="icon icon--sm" data-icon="sparkle"></i><span>This piece is in 1 saved look you were shopping for. Adding it updates that look.</span></div>
+    </div>
+    <div class="sheet__footer"><a class="button button--red button--full js-add" href="05-closet-added.html">Add to closet</a></div>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+</div>
+</body>
+</html>

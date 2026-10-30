@@ -1,0 +1,249 @@
+/* =====================================================================
+   My Closet for Pinterest: design tokens
+   Every value below has a named source. Values marked
+   "estimated" were not published and were measured from the team's
+   reference screens or the iPhone 17 spec.
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   Source A: Gestalt, Pinterest's design system
+   npm package gestalt-design-tokens@177.0.12
+   file: dist/css/vr-theme/variables.css (and variables-dark.css,
+         font-lineheight-default.css)
+   Names are kept exactly as Gestalt publishes them.
+   --------------------------------------------------------------------- */
+:root {
+  /* Base colours */
+  --base-color-grayscale-0: #ffffff;
+  --base-color-grayscale-25: #fffef7;
+  --base-color-grayscale-50: #f5f4ed;
+  --base-color-grayscale-100: #e8e7e1;
+  --base-color-grayscale-150: #c7c6c1;
+  --base-color-grayscale-200: #969292;
+  --base-color-grayscale-250: #757570;
+  --base-color-grayscale-300: #636361;
+  --base-color-grayscale-350: #4c4c4a;
+  --base-color-grayscale-400: #2e2e2d;
+  --base-color-grayscale-500: #000000;
+  --base-color-red-300: #e60023;       /* Pinterest red */
+  --base-color-red-400: #b2001a;
+  --base-color-green-400: #517d3b;
+  --base-color-green-500: #265926;
+  --base-color-blue-400: #007db8;
+  --base-color-pressed-red-300: #9e0017;
+  --base-color-pressed-grayscale-0: #ebebe5;
+  --base-color-pressed-grayscale-100: #c2c1bc;
+  --base-color-pressed-grayscale-500: #393937;
+
+  /* Semantic colours */
+  --sema-color-background-default: var(--base-color-grayscale-0);
+  --sema-color-background-secondary: var(--base-color-grayscale-100);
+  --sema-color-background-primary: var(--base-color-red-300);
+  --sema-color-background-selected: var(--base-color-grayscale-500);
+  --sema-color-background-inverse: var(--base-color-grayscale-500);
+  --sema-color-background-elevation: var(--base-color-grayscale-0);
+  --sema-color-background-disabled: var(--base-color-grayscale-100);
+  --sema-color-background-scrim: var(--base-color-grayscale-50);
+  --sema-color-background-wash-scrims-default: rgba(117, 117, 112, 0.4);
+  --sema-color-background-wash-image-tint: rgba(0, 0, 0, 0.04);
+  --sema-color-pressed-background-primary: var(--base-color-pressed-red-300);
+  --sema-color-pressed-background-secondary: var(--base-color-pressed-grayscale-100);
+  --sema-color-pressed-background-selected: var(--base-color-pressed-grayscale-500);
+  --sema-color-pressed-background-default: var(--base-color-pressed-grayscale-0);
+
+  --sema-color-text-default: var(--base-color-grayscale-500);
+  --sema-color-text-subtle: var(--base-color-grayscale-300);
+  --sema-color-text-disabled: var(--base-color-grayscale-200);
+  --sema-color-text-inverse: var(--base-color-grayscale-0);
+  --sema-color-text-success: var(--base-color-green-500);
+  --sema-color-icon-default: var(--base-color-grayscale-500);
+  --sema-color-icon-subtle: var(--base-color-grayscale-300);
+  --sema-color-icon-inverse: var(--base-color-grayscale-0);
+  --sema-color-icon-primary: var(--base-color-red-300);
+
+  --sema-color-border-decorative: var(--base-color-grayscale-150);
+  --sema-color-border-interactive: var(--base-color-grayscale-250);
+  --sema-color-border-selected: var(--base-color-grayscale-500);
+  --sema-color-border-focus-outer-default: var(--base-color-blue-400);
+
+  /* Type: font family, sizes, weights, line heights */
+  --base-font-family-default-latin: 'Pin Sans', -apple-system, BlinkMacSystemFont,
+    'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Pin Sans is not public, so browsers fall through to the
+     iPhone system font (SF Pro). Gestalt lists -apple-system second. */
+  --sema-font-size-heading-lg: 36px;
+  --sema-font-size-heading-md: 28px;
+  --sema-font-size-heading-sm: 20px;
+  --sema-font-size-heading-xs: 16px;
+  --sema-font-size-heading-xxs: 14px;
+  --sema-font-size-body-md: 16px;
+  --sema-font-size-body-sm: 14px;
+  --sema-font-size-body-xs: 12px;
+  --sema-font-size-ui-md: 16px;
+  --sema-font-size-ui-sm: 14px;
+  --sema-font-size-ui-xs: 12px;
+  --base-font-weight-400: 400;
+  --base-font-weight-500: 500;
+  --base-font-weight-700: 700;
+  --sema-font-lineheight-heading-lg: 40px;
+  --sema-font-lineheight-heading-md: 31px;
+  --sema-font-lineheight-heading-sm: 24px;
+  --sema-font-lineheight-heading-xs: 22px;
+  --sema-font-lineheight-heading-xxs: 20px;
+  --sema-font-lineheight-body-md: 22px;
+  --sema-font-lineheight-body-sm: 20px;
+  --sema-font-lineheight-body-xs: 17px;
+  --sema-font-lineheight-ui-md: 19px;
+  --sema-font-lineheight-ui-sm: 17px;
+  --sema-font-lineheight-ui-xs: 16px;
+
+  /* Space */
+  --sema-space-25: 1px;
+  --sema-space-50: 2px;
+  --sema-space-100: 4px;
+  --sema-space-150: 6px;
+  --sema-space-200: 8px;
+  --sema-space-300: 12px;
+  --sema-space-400: 16px;
+  --sema-space-500: 20px;
+  --sema-space-600: 24px;
+  --sema-space-800: 32px;
+  --sema-space-1000: 40px;
+  --sema-space-1200: 48px;
+
+  /* Rounding */
+  --sema-rounding-200: 8px;
+  --sema-rounding-300: 12px;
+  --sema-rounding-400: 16px;
+  --sema-rounding-500: 20px;
+  --sema-rounding-600: 24px;
+  --sema-rounding-800: 32px;
+  --sema-rounding-pill: 999px;
+  --sema-rounding-circle: 50%;
+
+  /* Elevation */
+  --sema-elevation-floating: 0px 4px 16px 0px rgba(0,0,0,0.1), 0px 1px 4px 0px rgba(0,0,0,0.08);
+  --sema-elevation-raised-top: 0px 1px 0px 0.5px rgba(0,0,0,0.06), 0px 2px 8px 0px rgba(0,0,0,0.12), 0px -1px 2px 0px rgba(0,0,0,0.06);
+  --sema-elevation-raised-bottom: 0px -1px 0px 0.5px rgba(0,0,0,0.06), 0px -2px 8px 0px rgba(0,0,0,0.12), 0px -1px 2px 0px rgba(0,0,0,0.06);
+
+  /* Motion */
+  --base-motion-duration-150: 150ms;
+  --base-motion-duration-200: 200ms;
+  --base-motion-easing-expressive: cubic-bezier(0.55, 0, 0, 1);
+}
+
+/* ---------------------------------------------------------------------
+   Source B: Gestalt Button docs
+   https://gestalt.pinterest.systems/web/button
+   "sm: 32px, md: 40px, lg: 48px" and "Large is the only size that should
+   be used on Pinner surfaces." Button text is always 16px.
+   --------------------------------------------------------------------- */
+:root {
+  --comp-button-height-lg: 48px;
+  --comp-button-height-md: 40px;
+  --comp-button-height-sm: 32px;
+}
+
+/* ---------------------------------------------------------------------
+   Source C: Apple Human Interface Guidelines
+   https://developer.apple.com/design/human-interface-guidelines/accessibility
+   https://developer.apple.com/design/human-interface-guidelines/typography
+   --------------------------------------------------------------------- */
+:root {
+  --tap-min: 44px;        /* minimum hit target, 44 x 44 pt */
+  --text-min: 11px;       /* never below 11 pt */
+}
+
+/* ---------------------------------------------------------------------
+   Source D: iPhone 17 screen (the student's phone)
+   402 x 874 pt. Status bar and home indicator heights are estimated
+   from Apple's iOS UI kit conventions for Dynamic Island phones.
+   --------------------------------------------------------------------- */
+:root {
+  --frame-width: 402px;
+  --frame-height: 874px;
+  --frame-radius: 55px;           /* estimated */
+  --status-bar-height: 54px;      /* estimated */
+  --home-indicator-height: 34px;  /* estimated */
+  --home-indicator-bar-width: 139px;  /* estimated */
+  --home-indicator-bar-height: 5px;   /* estimated */
+}
+
+/* ---------------------------------------------------------------------
+   Source E: the team's reference screens (uploaded 29 Oct)
+   Sizes Gestalt does not publish, measured from the team's screens.
+   --------------------------------------------------------------------- */
+:root {
+  --icon-size-sm: 16px;           /* estimated from reference screens */
+  --icon-size-md: 24px;           /* estimated from reference screens */
+  --icon-stroke: 2px;             /* estimated from reference screens */
+  --tab-bar-height: 50px;         /* estimated from reference screens */
+  --nav-bar-height: 52px;         /* estimated from reference screens */
+  --avatar-profile-size: 32px;    /* estimated from reference screens */
+  --sheet-grabber-width: 36px;    /* estimated from reference screens */
+  --sheet-grabber-height: 5px;    /* estimated from reference screens */
+  --badge-check-size: 22px;       /* estimated from reference screens */
+  --thumb-inspo-width: 64px;      /* estimated from reference screens */
+  --thumb-inspo-height: 88px;     /* estimated from reference screens */
+  --item-tile-ratio: 1 / 1;       /* estimated from reference screens */
+  --pin-ratio-tall: 3 / 4;        /* estimated from reference screens */
+  --board-cover-ratio: 3 / 2;     /* estimated from reference screens */
+  --avatar-stage-ratio: 4 / 3;    /* estimated from reference screens */
+  --feature-card-figure-width: 72px; /* estimated from reference screens */
+}
+
+/* ---------------------------------------------------------------------
+   Source F: Gestalt skin tones
+   npm package gestalt@177.0.12, dist/gestalt.es.js, ButtonToggle
+   "skinColor" (skinTone1 to skinTone16). The same 16 tones Pinterest
+   uses for its skin tone ranges. Used for the avatar only.
+   --------------------------------------------------------------------- */
+:root {
+  --skin-tone-1: #F0E3DC;  --skin-tone-2: #F8D7D8;  --skin-tone-3: #F2D7BE;  --skin-tone-4: #F7C3AF;
+  --skin-tone-5: #DEBAB0;  --skin-tone-6: #E0999A;  --skin-tone-7: #DDA67C;  --skin-tone-8: #D98A64;
+  --skin-tone-9: #9A6B52;  --skin-tone-10: #A25847; --skin-tone-11: #B37143; --skin-tone-12: #BF6951;
+  --skin-tone-13: #683929; --skin-tone-14: #34261F; --skin-tone-15: #64281B; --skin-tone-16: #4F2221;
+  --swatch-size: 32px;            /* estimated: inside a 44px tap target */
+  --avatar-mini-width: 104px;     /* estimated: compact closet header */
+  --avatar-mini-height: 152px;    /* estimated: compact closet header */
+  --map-node-size: 84px;          /* estimated: style map */
+  --map-center-size: 116px;       /* estimated: style map */
+  --avatar-ratio: 120 / 290;      /* the avatar drawing's own proportions */
+  --shape-top: 1 / 1;             /* estimated: tops, bags */
+  --shape-mid: 3 / 4;             /* estimated: skirts, jackets */
+  --shape-long: 3 / 5;            /* estimated: trousers, coats */
+  --shape-short: 4 / 3;           /* estimated: shoes */
+}
+
+/* ---------------------------------------------------------------------
+   App aliases: short names the components use. Each points at a token
+   above, so nothing new is introduced here.
+   --------------------------------------------------------------------- */
+:root {
+  --font: var(--base-font-family-default-latin);
+  --bg: var(--sema-color-background-default);
+  --bg-secondary: var(--sema-color-background-secondary);
+  --bg-tile: var(--base-color-grayscale-50);   /* warm cream tile, as in reference screens */
+  --text: var(--sema-color-text-default);
+  --text-subtle: var(--sema-color-text-subtle);
+  --accent: var(--sema-color-background-primary);
+}
+
+/* ---------------------------------------------------------------------
+   Dark mode. Source: Gestalt dist/css/vr-theme/variables-dark.css
+   --------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sema-color-background-default: var(--base-color-grayscale-500);
+    --sema-color-background-secondary: var(--base-color-grayscale-250);
+    --sema-color-background-selected: var(--base-color-grayscale-100);
+    --sema-color-background-inverse: var(--base-color-grayscale-0);
+    --sema-color-background-elevation: var(--base-color-grayscale-400);
+    --sema-color-text-default: var(--base-color-grayscale-0);
+    --sema-color-text-subtle: var(--base-color-grayscale-200);
+    --sema-color-text-inverse: var(--base-color-grayscale-500);
+    --sema-color-icon-default: var(--base-color-grayscale-0);
+    --sema-color-border-decorative: var(--base-color-grayscale-250);
+    --bg-tile: var(--base-color-grayscale-400);  /* estimated: no dark cream in Gestalt */
+  }
+}

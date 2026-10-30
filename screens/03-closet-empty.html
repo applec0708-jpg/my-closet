@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empty closet · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <header class="nav-bar"><a class="icon-button" href="01-profile.html" aria-label="Back"><i class="icon " data-icon="back"></i></a><div class="nav-bar__title"><span class="t-heading-xs">My Closet</span><span class="t-ui-xs t-subtle">0 items</span></div><button class="icon-button" aria-label="More"><i class="icon " data-icon="more"></i></button></header>
+  <nav class="tabs"><a class="tab is-selected" href="04-closet.html">Closet</a><a class="tab" href="14-looks.html">Looks</a><a class="tab" href="16-for-you.html">For You</a></nav>
+  <main class="screen-body">
+    <section class="closet-head">
+      <a class="avatar-frame" href="02-avatar-setup.html" aria-label="Edit your avatar"><div class="avatar" data-me data-skin="9" data-hair="long" data-hair-color="espresso" data-body="straight" data-outfit="top:tee:grey; bottom:trousers:grey; shoes:loafers:grey" aria-label="Your avatar, not dressed yet"></div></a>
+      <div class="closet-head__side">
+        <button class="button button--red" disabled><i class="icon " data-icon="sparkle"></i>Style me</button>
+        <p class="t-body-sm t-subtle" style="margin:0">Add a few pieces first, then we can style you.</p>
+        <a class="text-link" href="02-avatar-setup.html">Edit avatar</a>
+      </div>
+    </section>
+    <div class="empty">
+      <div class="empty__icon"><i class="icon " data-icon="hanger"></i></div>
+      <div class="t-heading-sm">Your closet is empty</div>
+      <div class="t-body-sm t-subtle">Add a few pieces you wear a lot. We'll start matching them to the outfits you've saved.</div>
+    </div>
+  </main>
+  <div class="fab-dock"><a class="button button--dark button--floating" href="06-upload-sheet.html"><i class="icon " data-icon="plus"></i>Upload</a></div>
+  <nav class="tab-bar">
+    <a class="tab-bar__item" href="#" aria-label="Home"><i class="icon " data-icon="home"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Search"><i class="icon " data-icon="search"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Create"><i class="icon " data-icon="plus"></i></a>
+    <a class="tab-bar__item" href="#" aria-label="Messages"><i class="icon " data-icon="message"></i></a>
+    <a class="tab-bar__item" href="01-profile.html" aria-label="Profile"><span class="tab-bar__avatar">A</span></a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Closet for Pinterest: prototype</title>
+<link rel="stylesheet" href="design-system/tokens.css">
+<link rel="stylesheet" href="design-system/components.css">
+<style>
+  body { background: var(--bg); padding: var(--sema-space-800); }
+  header, section { max-width: calc(var(--frame-width) * 3.5); margin: 0 auto var(--sema-space-800); }
+  h1, h2 { margin: 0 0 var(--sema-space-200); }
+  .strip { display: flex; gap: var(--sema-space-400); overflow-x: auto; padding-bottom: var(--sema-space-200); }
+  .thumb { flex: none; width: calc(var(--frame-width) / 2); display: flex; flex-direction: column; gap: var(--sema-space-100); }
+  .thumb img { width: 100%; border-radius: var(--sema-rounding-400); box-shadow: var(--sema-elevation-floating); background: var(--bg); }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="t-heading-md">My Closet for Pinterest</h1>
+  <p class="t-body-sm t-subtle">Student concept for DES 198 (Introduction to Product Design). Not made by or affiliated with Pinterest.</p>
+  <p class="t-body-md t-subtle">Working iPhone 17 prototype (402 × 874), built from Gestalt, Pinterest's design system. Your avatar, uploads and saved looks carry across screens. Press Reset to start fresh.</p>
+  <div class="row" style="margin-top: var(--sema-space-300)">
+    <a class="button button--red" href="screens/01-profile.html" style="flex:none">Start the prototype</a>
+    <a class="button button--gray" href="screens/02-avatar-setup.html" style="flex:none">Start as a new user</a>
+    <a class="button button--gray" href="design-system/components.html" style="flex:none">Components</a>
+    <button class="button button--gray" style="flex:none" id="reset">Reset prototype</button>
+  </div>
+</header>
+<section><h2 class="t-heading-sm">First time: set up your closet</h2><div class="strip"><a class="thumb" href="screens/02-avatar-setup.html"><img src="thumbs/02-avatar-setup.jpg" alt="Your avatar screen" loading="lazy"><span class="t-ui-sm t-bold">02 · Your avatar</span><span class="t-ui-xs t-subtle">NEW setup moment</span></a><a class="thumb" href="screens/03-closet-empty.html"><img src="thumbs/03-closet-empty.jpg" alt="Empty closet screen" loading="lazy"><span class="t-ui-sm t-bold">03 · Empty closet</span><span class="t-ui-xs t-subtle">Empty state</span></a><a class="thumb" href="screens/06-upload-sheet.html"><img src="thumbs/06-upload-sheet.jpg" alt="Add to your closet screen" loading="lazy"><span class="t-ui-sm t-bold">06 · Add to your closet</span><span class="t-ui-xs t-subtle">Upload sheet</span></a><a class="thumb" href="screens/07-new-item.html"><img src="thumbs/07-new-item.jpg" alt="New item screen" loading="lazy"><span class="t-ui-sm t-bold">07 · New item</span><span class="t-ui-xs t-subtle">Auto-detected tags</span></a><a class="thumb" href="screens/05-closet-added.html"><img src="thumbs/05-closet-added.jpg" alt="Item added screen" loading="lazy"><span class="t-ui-sm t-bold">05 · Item added</span><span class="t-ui-xs t-subtle">Toast</span></a></div></section><section><h2 class="t-heading-sm">Flow 1: Style me → Complete the look → Save</h2><div class="strip"><a class="thumb" href="screens/01-profile.html"><img src="thumbs/01-profile.jpg" alt="Profile screen" loading="lazy"><span class="t-ui-sm t-bold">01 · Profile</span><span class="t-ui-xs t-subtle">Entry point</span></a><a class="thumb" href="screens/04-closet.html"><img src="thumbs/04-closet.jpg" alt="Closet screen" loading="lazy"><span class="t-ui-sm t-bold">04 · Closet</span><span class="t-ui-xs t-subtle">Compact header, masonry</span></a><a class="thumb" href="screens/08-pick-board.html"><img src="thumbs/08-pick-board.jpg" alt="Pick a board screen" loading="lazy"><span class="t-ui-sm t-bold">08 · Pick a board</span></a><a class="thumb" href="screens/09-board-pins.html"><img src="thumbs/09-board-pins.jpg" alt="Pick a pin screen" loading="lazy"><span class="t-ui-sm t-bold">09 · Pick a pin</span></a><a class="thumb" href="screens/10-matching.html"><img src="thumbs/10-matching.jpg" alt="Matching… screen" loading="lazy"><span class="t-ui-sm t-bold">10 · Matching…</span><span class="t-ui-xs t-subtle">Loading state</span></a><a class="thumb" href="screens/11-complete-look-a.html"><img src="thumbs/11-complete-look-a.jpg" alt="Complete the look screen" loading="lazy"><span class="t-ui-sm t-bold">11 · Complete the look</span><span class="t-ui-xs t-subtle">Key screen · chosen version</span></a><a class="thumb" href="screens/12-save-sheet.html"><img src="thumbs/12-save-sheet.jpg" alt="Save this look screen" loading="lazy"><span class="t-ui-sm t-bold">12 · Save this look</span></a><a class="thumb" href="screens/13-complete-look-saved.html"><img src="thumbs/13-complete-look-saved.jpg" alt="Saved screen" loading="lazy"><span class="t-ui-sm t-bold">13 · Saved</span><span class="t-ui-xs t-subtle">Toast</span></a><a class="thumb" href="screens/14-looks.html"><img src="thumbs/14-looks.jpg" alt="Looks screen" loading="lazy"><span class="t-ui-sm t-bold">14 · Looks</span><span class="t-ui-xs t-subtle">Masonry</span></a><a class="thumb" href="screens/15-looks-empty.html"><img src="thumbs/15-looks-empty.jpg" alt="Looks, empty screen" loading="lazy"><span class="t-ui-sm t-bold">15 · Looks, empty</span><span class="t-ui-xs t-subtle">Empty state</span></a></div></section><section><h2 class="t-heading-sm">Flows 3 and 4: For You, preview, Style branches</h2><div class="strip"><a class="thumb" href="screens/16-for-you.html"><img src="thumbs/16-for-you.jpg" alt="For You screen" loading="lazy"><span class="t-ui-sm t-bold">16 · For You</span></a><a class="thumb" href="screens/17-product-preview.html"><img src="thumbs/17-product-preview.jpg" alt="Product preview screen" loading="lazy"><span class="t-ui-sm t-bold">17 · Product preview</span><span class="t-ui-xs t-subtle">On your avatar</span></a><a class="thumb" href="screens/18-style-branches.html"><img src="thumbs/18-style-branches.jpg" alt="Style branches screen" loading="lazy"><span class="t-ui-sm t-bold">18 · Style branches</span><span class="t-ui-xs t-subtle">NEW map</span></a><a class="thumb" href="screens/19-branch-feed.html"><img src="thumbs/19-branch-feed.jpg" alt="Quiet luxury screen" loading="lazy"><span class="t-ui-sm t-bold">19 · Quiet luxury</span><span class="t-ui-xs t-subtle">Branch feed</span></a></div></section>
+<section><h2 class="t-heading-sm">Explorations: three versions of Complete the look</h2><p class="t-body-sm t-subtle">We chose A. B and C stay here for the Explorations part of the case study.</p><div class="strip"><a class="thumb" href="screens/11-complete-look-a.html"><img src="thumbs/11-complete-look-a.jpg" alt="A · Stage and rows (chosen) screen" loading="lazy"><span class="t-ui-sm t-bold">11 · A · Stage and rows (chosen)</span><span class="t-ui-xs t-subtle">Your reference layout, quieter.</span></a><a class="thumb" href="screens/11-complete-look-b.html"><img src="thumbs/11-complete-look-b.jpg" alt="B · Side by side screen" loading="lazy"><span class="t-ui-sm t-bold">11 · B · Side by side</span><span class="t-ui-xs t-subtle">Pin next to you, then one list of pieces.</span></a><a class="thumb" href="screens/11-complete-look-c.html"><img src="thumbs/11-complete-look-c.jpg" alt="C · Toggle screen" loading="lazy"><span class="t-ui-sm t-bold">11 · C · Toggle</span><span class="t-ui-xs t-subtle">Switch between pin and you; pieces as pins.</span></a></div></section>
+<script>
+document.getElementById('reset').addEventListener('click', function () {
+  try { Object.keys(localStorage).filter(function (k) { return k.indexOf('myCloset.') === 0; }).forEach(function (k) { localStorage.removeItem(k); }); } catch (e) {}
+  this.textContent = 'Reset done';
+});
+</script>
+</body>
+</html>

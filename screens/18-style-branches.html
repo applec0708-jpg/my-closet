@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style branches · My Closet</title>
+<link rel="stylesheet" href="../design-system/tokens.css">
+<link rel="stylesheet" href="../design-system/components.css">
+<script src="../design-system/icons.js" defer></script>
+<script src="../design-system/avatar.js" defer></script>
+<script src="../prototype-data.js" defer></script>
+<script src="../prototype.js" defer></script>
+</head>
+<body data-page="">
+<div class="stage">
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span class="status-bar__right"><span class="status-bar__signal"><i></i><i></i><i></i><i></i></span><span class="status-bar__battery"></span></span></div>
+  <header class="nav-bar"><a class="icon-button" href="16-for-you.html" aria-label="Back"><i class="icon " data-icon="back"></i></a><div class="nav-bar__title"><span class="t-heading-xs">Style branches</span></div><span></span></header>
+  <main class="screen-body" style="padding-bottom: var(--sema-space-1000)">
+    <p class="t-body-sm t-subtle center" style="margin: 0 var(--sema-space-600)">Styles one step from what you already wear. Tap one to see what it adds.</p>
+    <div class="style-map">
+      <svg class="links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path data-branch="street" class="is-active" d="M50 50 Q30 40 20 24"/>
+        <path data-branch="western" d="M50 50 Q70 40 80 24"/>
+        <path data-branch="sleaze" d="M50 50 Q50 70 50 84"/>
+        <path d="M20 24 L6 8" stroke-dasharray="1.5 2"/><path d="M80 24 L94 8" stroke-dasharray="1.5 2"/><path d="M50 84 L72 96" stroke-dasharray="1.5 2"/>
+        <circle cx="6" cy="8" r="1.4"/><circle cx="94" cy="8" r="1.4"/><circle cx="72" cy="96" r="1.4"/>
+      </svg>
+      <div class="map-node map-node--center" style="left:50%; top:50%">
+        <span class="avatar" data-me data-skin="9" data-hair="long" data-hair-color="espresso" data-body="straight" data-outfit="top:zipjacket:#c9c9c4; bottom:jeans:#a7b9cc; shoes:boots:black"></span>
+        <span class="map-node__name">Y2K grunge</span><span class="map-node__fit">You, now</span>
+      </div>
+      <button class="map-node is-selected" data-branch="street" style="left:20%; top:24%"><span class="map-node__name">2000s streetwear</span><span class="map-node__fit">8 fit</span></button>
+      <button class="map-node" data-branch="western" style="left:80%; top:24%"><span class="map-node__name">Western</span><span class="map-node__fit">6 fit</span></button>
+      <button class="map-node" data-branch="sleaze" style="left:50%; top:84%"><span class="map-node__name">Indie sleaze</span><span class="map-node__fit">4 fit</span></button>
+    </div>
+    <p class="t-body-xs t-subtle center" style="margin: 0 0 var(--sema-space-400)">Dotted lines open up as your closet grows.</p>
+    <div class="branch-detail" data-branch="street" style="padding: 0 var(--sema-space-400)">
+        <div class="t-heading-sm">2000s streetwear</div>
+        <p class="t-body-sm t-subtle" style="margin: var(--sema-space-100) 0 var(--sema-space-300)">Graphic tees, baggy denim and zip-ups. Your closet already leans this way.</p>
+        <div class="branch__pieces"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/baggy-cargo-pants.jpg" alt="" onerror="this.remove()">Baggy cargo pants</div><div class="ph ph--cutout shape-top"><img class="photo" src="../images/trucker-cap.jpg" alt="" onerror="this.remove()">Trucker cap</div><div class="ph ph--cutout shape-top"><img class="photo" src="../images/chunky-sneakers.jpg" alt="" onerror="this.remove()">Chunky sneakers</div></div>
+        <p class="t-ui-sm" style="margin: var(--sema-space-300) 0">8 pieces you own already fit</p>
+        <a class="button button--red button--full" href="19-branch-feed.html">See 2000s streetwear ideas</a>
+      </div>
+    <div class="branch-detail" data-branch="western" hidden style="padding: 0 var(--sema-space-400)">
+        <div class="t-heading-sm">Western</div>
+        <p class="t-body-sm t-subtle" style="margin: var(--sema-space-100) 0 var(--sema-space-300)">Ringer tees, bootcut denim and warm browns, with a bit of buckle.</p>
+        <div class="branch__pieces"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/cowboy-boots.jpg" alt="" onerror="this.remove()">Cowboy boots</div><div class="ph ph--cutout shape-top"><img class="photo" src="../images/studded-belt.jpg" alt="" onerror="this.remove()">Studded belt</div><div class="ph ph--cutout shape-top"><img class="photo" src="../images/suede-jacket.jpg" alt="" onerror="this.remove()">Suede jacket</div></div>
+        <p class="t-ui-sm" style="margin: var(--sema-space-300) 0">6 pieces you own already fit</p>
+        <a class="button button--red button--full" href="19-branch-feed.html">See western ideas</a>
+      </div>
+    <div class="branch-detail" data-branch="sleaze" hidden style="padding: 0 var(--sema-space-400)">
+        <div class="t-heading-sm">Indie sleaze</div>
+        <p class="t-body-sm t-subtle" style="margin: var(--sema-space-100) 0 var(--sema-space-300)">Darker and messier: worn-in denim, black boots and a leather layer.</p>
+        <div class="branch__pieces"><div class="ph ph--cutout shape-top"><img class="photo" src="../images/leather-moto-jacket.jpg" alt="" onerror="this.remove()">Leather moto jacket</div><div class="ph ph--cutout shape-top"><img class="photo" src="../images/striped-long-sleeve.jpg" alt="" onerror="this.remove()">Striped long-sleeve</div><div class="ph ph--cutout shape-top"><img class="photo" src="../images/mini-skirt.jpg" alt="" onerror="this.remove()">Mini skirt</div></div>
+        <p class="t-ui-sm" style="margin: var(--sema-space-300) 0">4 pieces you own already fit</p>
+        <a class="button button--red button--full" href="19-branch-feed.html">See indie sleaze ideas</a>
+      </div>
+  </main>
+  <div class="home-indicator"></div>
+</div>
+</div>
+<script>/* Tap a branch to see what it adds. */
+document.querySelectorAll('.map-node[data-branch]').forEach(function (node) {
+  node.addEventListener('click', function () {
+    var key = node.dataset.branch;
+    document.querySelectorAll('.map-node[data-branch]').forEach(function (n) { n.classList.toggle('is-selected', n === node); });
+    document.querySelectorAll('.links path[data-branch]').forEach(function (p) { p.classList.toggle('is-active', p.dataset.branch === key); });
+    document.querySelectorAll('.branch-detail').forEach(function (d) { d.hidden = d.dataset.branch !== key; });
+  });
+});</script>
+</body>
+</html>
